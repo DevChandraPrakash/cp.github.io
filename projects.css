@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #1a191d;
+    /* min-height: 100vh;
+    background: linear-gradient(white,white), url(code.jpg);
+    background-repeat: no-repeat;
+    background-blend-mode:color-burn; */
+}
+
+.heading {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.expertises {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.expertises-container {
+    width: 50%;
+    padding: 10px;
+    transition: 0.5s;
+}
+.expertises-container .expertise{
+    padding: 10px;
+    border: 2px solid grey;
+    transition: 0.5s;
+}
+.expertise-title {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1.2em;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+.expertise-title a{
+    color: white;
+}
+.expertise-desc {
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.4em;
+    position: relative;
+    padding-left: 40px;
+    transition: 0.5s;
+    height: 130px;
+}
+
+.expertise-desc .description::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '<h3>';
+    margin-bottom: 5px;
+    opacity: 0.4;
+}
+
+.expertise-desc .description::after {
+    content: '</h3>';
+    position: absolute;
+    display: block;
+    bottom:-4px;
+    left: 0;
+    margin-top: 5px;
+    opacity: 0.4;
+}
+
+ .expertise-desc::before {
+    opacity: 0.4;
+    content: '';
+    width: 0;
+    height: 60%;
+    position: absolute;
+    background-color: #fff;
+    border: 0.1px solid #fff;
+    bottom: 17%;
+    left: 17px;
+}
+.expertise-desc .description{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+
+@media (max-width:1100px) {
+    .expertises-container{
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width:900px){
+    .expertise-title {
+        font-size: 1.2em;
+    }
+}

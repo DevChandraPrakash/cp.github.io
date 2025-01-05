@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandra Prakash - Home</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container-circle">
+        <div class="circle"></div>
+        <div class="dot"></div>
+    </div>
+
+    <section class="banner">
+        <header>
+            <a href="#" class="logo">
+                <span>CHANDRA</span> PRAKASH
+            </a>
+            <ul>
+                <li>
+                    <a href="mailto:cpgooooogle@gmail.com">Hire Me</a>
+                </li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <h3>Hi,</h3>
+            <h2><span class="iam">I am</span> <span id="text"></span></h2>
+            <p>I am a 26-year-old who has successfully earned a master's degree in computer science, and I am
+                currently working as Software Developer and engaged in continuous learning to further enhance my skills.
+            </p>
+            <div class="buttons">
+                <a href="projects.html" target="_blank"><button data-text="My Projects">My Projects</button></a>
+                <a href="cv.html" target="_blank"><button data-text="My CV">My CV</button></a>
+            </div>
+        </div>
+    </section>
+
+    <ul class="social">
+        <li class="bounce-animation"><a href="http://facebook.com/haxkd" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a></li>
+        <li class="rotate-animation "><a href="http://instagram.com/haxkd_official" target="_blank"><i
+                    class="fa-brands text-orange fa-instagram"></i></a>
+        </li>
+        <li class="swing-animation"><a href="https://www.linkedin.com/in/haxkd/" target="_blank"><i
+                    class="fa-brands text-blue fa-linkedin"></i></a></li>
+        <li class="flash-animation"><a href="https://github.com/haxkd/" target="_blank"><i
+                    class="fa-brands fa-github"></i></a></li>
+        <li class="pulse-animation"><a href="https://twitter.com/abulhax/" target="_blank"><i
+                    class="fa-brands fa-x-twitter"></i></a></li>
+        <li class="bounce-animation"><a href="https://www.hackerrank.com/profile/abulhax" target="_blank"><i
+                    class="fa-brands fa-hackerrank"></i></a></li>
+    </ul>
+
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        const text = new Typed("#text", {
+            strings: ["Chandra Prakash", "^1000Software Developer"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 1000,
+            cursorChar: '_',
+        })
+    </script>
+    <script>
+        const circle = document.querySelector(".circle");
+        const dot = document.querySelector(".dot");
+
+        document.addEventListener("mousemove", (e) => {
+            const x = e.clientX - 2;
+            const y = e.clientY - 2;
+            circle.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+            dot.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+        });
+
+        document.body.onmouseover = () => {
+            document.body.classList.add("showdot")
+        }
+        document.body.onmouseout = () => {
+            document.body.classList.remove("showdot")
+        }
+
+
+    </script>
+</body>
+
+</html>
